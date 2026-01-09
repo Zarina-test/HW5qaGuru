@@ -2,6 +2,7 @@
 export class HomePage {
     constructor(page) {
         this.page = page;
+        this.profileName = page.locator('.dropdown-toggle')
         this.globalFeedTab = page.locator('.nav-link', { hasText: 'Global Feed' });
         this.articlePreviews = page.locator('.article-preview');
         this.tags = page.locator('.tag-list .tag-pill');
@@ -28,5 +29,9 @@ export class HomePage {
 
     async getTags() {
         return await this.tags.allTextContents();
+    }
+
+    async getProfileNameLocator() {
+        return this.this.profileName;
     }
 };

@@ -18,7 +18,7 @@ export class RegisterPage {
         await this.emailInput.fill(email);
         await this.password.click();
         await this.password.fill(password);
-        this.signupButton.click();
+        await this.signupButton.click();
 
     };
 
