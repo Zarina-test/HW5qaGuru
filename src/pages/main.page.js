@@ -1,3 +1,4 @@
+import { test, expect } from '@playwright/test';
 
 export class MainPage {
     constructor(page) {
@@ -10,7 +11,11 @@ export class MainPage {
     }
 
     async gotoRegister() {
-        await this.signupLink.click();
+        
+        return test.step('go to registry page', async(step) => {
+        
+            await this.signupLink.click();
+    })
     }
 
     async gotoNewArticle() {
@@ -22,6 +27,8 @@ export class MainPage {
     }
 
     async open(url) {
-        await this.page.goto(url);
-    }
+        return test.step('go to MAIN page', async(step) => {
+            await this.page.goto(url);
+    })
+}
 }
