@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 import { faker } from '@faker-js/faker';
 import { MainPage } from '../src/pages/main.page';
 import { RegisterPage } from '../src/pages/register.page';
-import { HomePage } from '../src/pages/home.page ';
+import { HomePage } from '../src/pages/home.page';
 
 const user = {
   email: faker.internet.email({provider: 'mail.ru'}),
