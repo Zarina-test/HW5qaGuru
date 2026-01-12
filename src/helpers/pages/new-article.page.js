@@ -1,4 +1,5 @@
 export class NewArticlePage {
+    
     constructor(page) {
         this.page = page;
         this.titleInput = page.getByPlaceholder('Article Title');

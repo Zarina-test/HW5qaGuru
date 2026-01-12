@@ -1,4 +1,5 @@
 export class ArticlePage {
+    
     constructor(page) {
         this.page = page;
         this.articleTitle = page.locator('h1');

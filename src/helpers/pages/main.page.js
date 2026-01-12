@@ -1,6 +1,7 @@
 import { test, expect } from '@playwright/test';
 
 export class MainPage {
+    
     constructor(page) {
         this.page = page;
         this.signupLink = page.getByRole('link', { name: 'Sign up' });
