@@ -25,4 +25,9 @@ export class ArticlePage {
     async getComments() {
         return await this.comments.allTextContents();
     }
+
+    async deleteComment(index = 0) {
+        const deleteButtons = this.page.locator('.card .btn-outline-secondary');
+        await deleteButtons.nth(index).click();
+    }
 };
